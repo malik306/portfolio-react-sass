@@ -1,0 +1,75 @@
+header {
+  width: 100%;
+  height: auto;
+  background: set-color(gray-4);
+  nav {
+    padding: 0.5rem 0.8rem; //tbpx rlpx
+    display: flex;
+    flex: none;
+    align-items: center;
+    justify-content: space-between;
+    a img {
+      height: auto;
+      width: 1.2in;
+      background-size: cover;
+    }
+    button {
+      background-color: transparent;
+      display: none;
+      transition: color 0.5s ease-in-out;
+      &:hover {
+        color: set-color(gray-5);
+      }
+      @include screen-max-width(600) {
+        display: block;
+        position: absolute;
+        right: 0.2in;
+      }
+    }
+    ul {
+      display: flex;
+      flex: none;
+      color: set-color(white);
+      li {
+        margin: 0 1ex;
+
+        padding: 8px;
+        border-radius: 4px;
+        font-size: 1rem;
+        color: set-color(gray-9);
+        background-color: set-color(gray-2);
+        cursor: pointer;
+        transition: border-bottom 1s ease-in-out; /* property name | duration | easing function | delay */
+
+        &:hover {
+          border-bottom: 1.5px solid set-color(gray);
+          color: set-color(gray-7);
+        }
+      }
+      @include screen-max-width(600) {
+        display: none;
+      }
+    }
+  }
+}
+//when we click the btn bar then open the menu as a toggle class
+@include screen-max-width(600) {
+  header nav {
+    position: relative;
+    ul.open-close {
+      display: block;
+      position: absolute;
+      background: set-color(gray-4);
+      right: 0;
+      top: 0.7in;
+      li {
+        transition: margin 0.5s ease-in-out;
+        margin: 1.6rem 0;
+        min-width: 50vw;
+        display: block;
+        text-align: center;
+        border-radius: 0;
+      }
+    }
+  }
+}

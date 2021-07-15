@@ -1,0 +1,54 @@
+//Resets
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  list-style: none;
+  border: none;
+  font-family: "Lato", sans-serif;
+}
+
+//Variables
+$color: (
+  blue: blue,
+  indigo: indigo,
+  purple: purple,
+  pink: pink,
+  danger: red,
+  orange: orange,
+  warning: yellow,
+  success: green,
+  teal: teal,
+  info: cyan,
+  white: white,
+  gray-1: #f8f9fa,
+  gray-2: #e9ecef,
+  gray-3: #dee2e6,
+  gray-4: #ced4da,
+  gray-5: #adb5bd,
+  gray-6: #6c757d,
+  gray-7: #495057,
+  gray-8: #343a40,
+  gray-9: #212529,
+  black: black,
+);
+
+//Functions
+@function set-color($colorName) {
+  @return map-get($color, $colorName);
+}
+
+@function set-tint-color($color, $percentage) {
+  @return mix(#ffffff, $color, $percentage);
+}
+@function set-shade-color($color, $percentage) {
+  @return mix(#000000, $color, $percentage);
+}
+
+@mixin screen-max-width($max-width) {
+  @media only screen and (max-width: #{$max-width}px) {
+    @content;
+  }
+}
