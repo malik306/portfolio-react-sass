@@ -28,10 +28,10 @@ export default function Header() {
   }
   return (
     <>
-      <header >
-        <nav>
+      <header className="nav">
+        <nav className="nav__bar">
           <Link to="/" ><img src={logoBrand} alt="svg logo" /></Link>
-          <button type="button" onClick={handleToggle}>
+          <button type="button" onClick={handleToggle} className="nav__bar__humburger">
             <i className="fas fa-2x fa-bars"></i>
           </button>
           <ul className={toggleClass ? "open-close" : ""}>

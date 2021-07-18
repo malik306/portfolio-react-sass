@@ -1,13 +1,10 @@
-.b {
+.foot {
   color: set-color(black);
   width: 100%;
   padding: 1% 2%;
-  &-flex {
+  &__content {
     display: flex;
-    .links-info {
-      width: set-col-width(2);
-    }
-    .icons {
+    &__icons {
       width: set-col-width(3);
       display: flex;
       flex-direction: column;
@@ -27,16 +24,18 @@
         color: set-color(black);
       }
     }
-    p.links-info {
+    &--let {
       font-size: 42px;
       font-weight: 300;
       color: set-color(black);
       line-height: 1.2;
+      width: set-col-width(2);
     }
-    ul.links-info {
+    &__list {
       display: flex;
       flex-direction: column;
       align-items: flex-end;
+      width: set-col-width(2);
       li {
         display: block;
         padding: 8px;
@@ -50,7 +49,7 @@
         }
       }
     }
-    &-copy {
+    &--copy {
       text-align: center;
       display: block;
       padding-top: 10px;
@@ -63,7 +62,7 @@
         }
       }
     }
-    &-social-icons {
+    &--socialicon {
       text-align: center;
       .fab {
         font-size: 30px;
@@ -83,21 +82,19 @@
 
 //media queries
 @include screen-max-width(835) {
-  .media-flex {
+  .foot__content--lets {
     display: flex;
     flex-direction: column;
-    .links-info {
-      text-align: center;
-      width: set-col-width(1);
-      padding: 10px 0;
-    }
-    ul.links-info {
+    .foot__content__list,.foot__content--let {
       align-items: center;
+      text-align: center;
+      padding: 10px 0;
+      width: set-col-width(1);
     }
   }
-  .icon {
+  .foot__content--icon {
     flex-wrap: wrap;
-    .icons {
+    .foot__content__icons {
       &:nth-child(1),
       &:nth-child(2) {
         width: set-col-width(2);
@@ -109,13 +106,13 @@
   }
 }
 @include screen-max-width(428) {
-  .media-flex p.links-info {
+  .foot__content--let {
     font-size: 32px;
   }
 }
 
 @include screen-max-width(625) {
-  .icon {
+  .foot__content--icon {
     flex-wrap: wrap;
     flex-direction: column;
     align-items: center;

@@ -1,8 +1,8 @@
-header {
+.nav {
   width: 100%;
   height: auto;
   background: set-color(gray-4);
-  nav {
+  &__bar {
     padding: 0.5rem 0.8rem; //tbpx rlpx
     display: flex;
     flex: none;
@@ -13,10 +13,10 @@ header {
       width: 1.2in;
       background-size: cover;
     }
-    button {
+    &__humburger {
       background-color: transparent;
       display: none;
-      @include transition(all,1s,ease,null);
+      @include transition(all, 1s, ease, null);
       &:hover {
         color: set-color(gray-5);
       }
@@ -37,7 +37,7 @@ header {
         font-size: 1rem;
         color: set-color(gray-9);
         cursor: pointer;
-        @include transition(all,1s,ease,null);
+        @include transition(all, 1s, ease, null);
         &:hover {
           border-bottom: 1px solid set-color(gray);
           background-color: set-color(gray-2);
@@ -46,25 +46,27 @@ header {
       }
       @include screen-max-width(720) {
         display: none;
+        @include transition(all, 1s, ease, null);
+        clip-path: circle(0.4% at 100% 0);
       }
     }
   }
 }
 //when we click the btn bar then open the menu as a toggle class
 @include screen-max-width(720) {
-  header nav {
+  .nav__bar {
     position: relative;
     ul.open-close {
       display: block;
       position: absolute;
+      clip-path: circle(141.2% at 100% 0);
       background: set-color(gray-4);
       right: 0;
       top: 0.7in;
       padding: 2rem 0;
       width: set-col-width(1);
-      min-height: 80vh;
       li {
-        @include transition(all,1s,ease,null);
+        @include transition(all, 1s, ease, null);
         margin: 2rem 0;
         display: block;
         font-size: 32px;
