@@ -38,23 +38,26 @@ export default function Header() {
             <Link to="/">
               <li>Home</li>
             </Link>
+            <Link to="/about">
+              <li>About Me</li>
+            </Link>
+            <Link to="resume">
+              <li>My&nbsp;Resume</li>
+            </Link>
             <Link to="project">
-              <li>Projects</li>
+              <li>My&nbsp;Projects</li>
             </Link>
             <Link to="githubapi">
               <li>Github&nbsp;Api</li>
             </Link>
-            <Link to="contactus">
-              <li>Contact&nbsp;Us</li>
-            </Link>
           </ul>
         </nav>
       </header>
-      {/*<br />
+      
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "0 auto", flexDirection: "column" }}>
         <p style={{ color: 'black', padding: '10px', }}>Inner Window Width is {windowWidth}px</p>
         <p style={{ color: 'black', padding: '10px', }}>Inner Window Height is {windowHeight}px</p>
-      </div>*/}
+      </div>
 
     </>
   );

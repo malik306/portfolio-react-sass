@@ -16,11 +16,11 @@ header {
     button {
       background-color: transparent;
       display: none;
-      transition: color 0.5s ease-in-out;
+      @include transition(all,1s,ease,null);
       &:hover {
         color: set-color(gray-5);
       }
-      @include screen-max-width(600) {
+      @include screen-max-width(720) {
         display: block;
         position: absolute;
         right: 0.2in;
@@ -32,28 +32,26 @@ header {
       color: set-color(white);
       li {
         margin: 0 1ex;
-
         padding: 8px;
-        border-radius: 4px;
+        border-radius: 5px;
         font-size: 1rem;
         color: set-color(gray-9);
-        background-color: set-color(gray-2);
         cursor: pointer;
-        transition: border-bottom 1s ease-in-out; /* property name | duration | easing function | delay */
-
+        @include transition(all,1s,ease,null);
         &:hover {
-          border-bottom: 1.5px solid set-color(gray);
+          border-bottom: 1px solid set-color(gray);
+          background-color: set-color(gray-2);
           color: set-color(gray-7);
         }
       }
-      @include screen-max-width(600) {
+      @include screen-max-width(720) {
         display: none;
       }
     }
   }
 }
 //when we click the btn bar then open the menu as a toggle class
-@include screen-max-width(600) {
+@include screen-max-width(720) {
   header nav {
     position: relative;
     ul.open-close {
@@ -62,11 +60,14 @@ header {
       background: set-color(gray-4);
       right: 0;
       top: 0.7in;
+      padding: 2rem 0;
+      width: set-col-width(1);
+      min-height: 80vh;
       li {
-        transition: margin 0.5s ease-in-out;
-        margin: 1.6rem 0;
-        min-width: 50vw;
+        @include transition(all,1s,ease,null);
+        margin: 2rem 0;
         display: block;
+        font-size: 32px;
         text-align: center;
         border-radius: 0;
       }

@@ -1,0 +1,123 @@
+.b {
+  color: set-color(black);
+  width: 100%;
+  padding: 1% 2%;
+  &-flex {
+    display: flex;
+    .links-info {
+      width: set-col-width(2);
+    }
+    .icons {
+      width: set-col-width(3);
+      display: flex;
+      flex-direction: column;
+      color: set-color(gray-4);
+      text-align: center;
+      border-radius: 10px;
+      padding: 15px;
+      @include transition(all, 1s, ease, null);
+      .fas {
+        font-size: 30px;
+      }
+      span {
+        font-size: 18px;
+        margin-top: 15px;
+      }
+      &:hover {
+        color: set-color(black);
+      }
+    }
+    p.links-info {
+      font-size: 42px;
+      font-weight: 300;
+      color: set-color(black);
+      line-height: 1.2;
+    }
+    ul.links-info {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+      li {
+        display: block;
+        padding: 8px;
+        margin: 5px 0;
+        color: set-color(black);
+        border-radius: 8px;
+        @include transition(all, 1s, ease, null);
+        &:hover {
+          background: set-color(gray-2);
+          border-bottom: 1px solid black;
+        }
+      }
+    }
+    &-copy {
+      text-align: center;
+      display: block;
+      padding-top: 10px;
+      a {
+        color: set-color(black);
+        @include transition(all, 0.5s, ease, null);
+        text-decoration: underline double set-color(gray-4);
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &-social-icons {
+      text-align: center;
+      .fab {
+        font-size: 30px;
+        padding: 8px;
+        color: set-color(gray-4);
+        margin: 8px;
+        border-radius: 50%;
+        @include transition(all, 0.5s, ease, null);
+        &:hover {
+          color: set-color(black);
+          background: set-color(gray-4);
+        }
+      }
+    }
+  }
+}
+
+//media queries
+@include screen-max-width(835) {
+  .media-flex {
+    display: flex;
+    flex-direction: column;
+    .links-info {
+      text-align: center;
+      width: set-col-width(1);
+      padding: 10px 0;
+    }
+    ul.links-info {
+      align-items: center;
+    }
+  }
+  .icon {
+    flex-wrap: wrap;
+    .icons {
+      &:nth-child(1),
+      &:nth-child(2) {
+        width: set-col-width(2);
+      }
+      &:nth-child(3) {
+        width: set-col-width(1);
+      }
+    }
+  }
+}
+@include screen-max-width(428) {
+  .media-flex p.links-info {
+    font-size: 32px;
+  }
+}
+
+@include screen-max-width(625) {
+  .icon {
+    flex-wrap: wrap;
+    flex-direction: column;
+    align-items: center;
+  }
+}
