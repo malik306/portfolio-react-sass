@@ -3,27 +3,33 @@
   width: 100%;
   padding: 1% 2%;
   &__content {
-    display: flex;
-    &__icons {
-      width: set-col-width(3);
-      display: flex;
-      flex-direction: column;
-      color: set-color(gray-4);
-      text-align: center;
-      border-radius: 10px;
-      padding: 15px;
-      @include transition(all, 1s, ease, null);
-      .fas {
-        font-size: 30px;
-      }
-      span {
-        font-size: 18px;
-        margin-top: 15px;
-      }
-      &:hover {
-        color: set-color(black);
+    &--icon {
+      display: grid;
+      @include grid-template(auto/1fr 1fr 1fr);
+      grid-gap: 10px;
+      &--envelope,
+      &--map,
+      &--phone {
+        display: flex;
+        flex-direction: column;
+        color: set-color(gray-4);
+        text-align: center;
+        border-radius: 10px;
+        padding: 10px;
+        @include transition(all, 1s, ease, null);
+        .fas {
+          font-size: 30px;
+        }
+        span {
+          font-size: 18px;
+          margin-top: 15px;
+        }
+        &:hover {
+          color: set-color(black);
+        }
       }
     }
+    display: flex;
     &--let {
       font-size: 42px;
       font-weight: 300;
@@ -85,23 +91,12 @@
   .foot__content--lets {
     display: flex;
     flex-direction: column;
-    .foot__content__list,.foot__content--let {
+    .foot__content__list,
+    .foot__content--let {
       align-items: center;
       text-align: center;
       padding: 10px 0;
       width: set-col-width(1);
-    }
-  }
-  .foot__content--icon {
-    flex-wrap: wrap;
-    .foot__content__icons {
-      &:nth-child(1),
-      &:nth-child(2) {
-        width: set-col-width(2);
-      }
-      &:nth-child(3) {
-        width: set-col-width(1);
-      }
     }
   }
 }
@@ -110,11 +105,17 @@
     font-size: 32px;
   }
 }
-
-@include screen-max-width(625) {
+//row-start,column-start,row-end ,column-end
+@include screen-max-width(650) {
   .foot__content--icon {
-    flex-wrap: wrap;
-    flex-direction: column;
-    align-items: center;
+    @include grid-template(1fr 1fr/1fr 1fr);
+    &--phone {
+      grid-area: 2/1/-1/-1;
+    }
+  }
+}
+@include screen-max-width(500) {
+  .foot__content--icon {
+    @include grid-template(1fr 1fr/1fr);
   }
 }

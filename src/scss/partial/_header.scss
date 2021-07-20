@@ -47,7 +47,6 @@
       @include screen-max-width(720) {
         display: none;
         @include transition(all, 1s, ease, null);
-        clip-path: circle(0.4% at 100% 0);
       }
     }
   }
@@ -59,12 +58,11 @@
     ul.open-close {
       display: block;
       position: absolute;
-      clip-path: circle(141.2% at 100% 0);
+      @include inset(72px 0 0 0);
       background: set-color(gray-4);
-      right: 0;
-      top: 0.7in;
       padding: 2rem 0;
       width: set-col-width(1);
+      height: 520px;
       li {
         @include transition(all, 1s, ease, null);
         margin: 2rem 0;

@@ -10,8 +10,6 @@
   font-family: "Lato", sans-serif;
 }
 
-//width
-$value100:100%;
 //Variables
 $color: (
   blue: blue,
@@ -48,16 +46,22 @@ $color: (
 @function set-shade-color($color, $percentage) {
   @return mix(#000000, $color, $percentage);
 }
-@function set-col-width($divideCol) {
-  @return ($value100/$divideCol);
+@function set-col-width($cols-divide) {
+  @return (100%/$cols-divide);
 }
 
+//Mixins
 @mixin screen-max-width($max-width) {
   @media only screen and (max-width: #{$max-width}px) {
     @content;
   }
 }
-
-@mixin transition($name,$duration,$time-function,$delay){
+@mixin transition($name, $duration, $time-function, $delay) {
   transition: $name $duration $time-function $delay;
+}
+@mixin grid-template($grid-template) {
+  grid-template: $grid-template;
+}
+@mixin inset($inset){
+  inset: $inset;
 }
