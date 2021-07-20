@@ -5,7 +5,7 @@
   &__content {
     &--icon {
       display: grid;
-      @include grid-template(auto/1fr 1fr 1fr);
+      grid-template: auto/1fr 1fr 1fr;
       grid-gap: 10px;
       &--envelope,
       &--map,
@@ -108,7 +108,7 @@
 //row-start,column-start,row-end ,column-end
 @include screen-max-width(650) {
   .foot__content--icon {
-    @include grid-template(1fr 1fr/1fr 1fr);
+    grid-template: 1fr 1fr/1fr 1fr;
     &--phone {
       grid-area: 2/1/-1/-1;
     }
@@ -116,6 +116,6 @@
 }
 @include screen-max-width(500) {
   .foot__content--icon {
-    @include grid-template(1fr 1fr/1fr);
+    grid-template: 1fr 1fr/1fr;
   }
 }

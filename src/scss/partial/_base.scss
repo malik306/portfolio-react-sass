@@ -59,9 +59,6 @@ $color: (
 @mixin transition($name, $duration, $time-function, $delay) {
   transition: $name $duration $time-function $delay;
 }
-@mixin grid-template($grid-template) {
-  grid-template: $grid-template;
-}
 @mixin inset($inset){
   inset: $inset;
 }
