@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import logoBrand from '../images/logo.svg';
+import logoBrand from '../images/malik-portfolio.svg';
 
 export default function Header() {
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
@@ -39,21 +39,21 @@ export default function Header() {
               <li>Home</li>
             </Link>
             <Link to="/about">
-              <li>About Me</li>
+              <li>About&nbsp;Me</li>
             </Link>
-            <Link to="resume">
+            <Link to="/resume">
               <li>My&nbsp;Resume</li>
             </Link>
-            <Link to="project">
+            <Link to="/project">
               <li>My&nbsp;Projects</li>
             </Link>
-            <Link to="githubapi">
+            <Link to="/githubapi">
               <li>Github&nbsp;Api</li>
             </Link>
           </ul>
         </nav>
       </header>
-      
+
       <div style={{ display: "flex", justifyContent: "center", alignItems: "center", margin: "0 auto", flexDirection: "column" }}>
         <p style={{ color: 'black', padding: '10px', }}>Inner Window Width is {windowWidth}px</p>
         <p style={{ color: 'black', padding: '10px', }}>Inner Window Height is {windowHeight}px</p>

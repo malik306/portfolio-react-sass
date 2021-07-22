@@ -10,7 +10,7 @@ export default function Footer() {
                             <li>Home</li>
                         </Link>
                         <Link to="/about">
-                            <li>About Me</li>
+                            <li>About&nbsp;Me</li>
                         </Link>
                         <Link to="/resume">
                             <li>My&nbsp;Resume</li>
@@ -36,7 +36,7 @@ export default function Footer() {
                     <i className="fab fa-facebook-f"></i>
                 </div>
                 <div className="foot__content--copy">
-                    <p>&copy; Copyright Deign by <Link to="/">Malik Front End Developer</Link></p>
+                    <p>&copy; Copyright 2021 Deign by <Link to="/">Malik Front End Developer</Link></p>
                 </div>
             </footer>
         </>

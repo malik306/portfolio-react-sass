@@ -3,14 +3,14 @@
   height: auto;
   background: set-color(gray-4);
   &__bar {
-    padding: 0.5rem 0.8rem; //tbpx rlpx
+    padding: 0.8em 1em; //tbpx rlpx
     display: flex;
     flex: none;
     align-items: center;
     justify-content: space-between;
     a img {
       height: auto;
-      width: 1.2in;
+      width: 8em;
       background-size: cover;
     }
     &__humburger {
@@ -20,10 +20,10 @@
       &:hover {
         color: set-color(gray-5);
       }
-      @include screen-max-width(720) {
+      @include screen-max-width(750) {
         display: block;
         position: absolute;
-        right: 0.2in;
+        right: 1em;
       }
     }
     ul {
@@ -34,7 +34,7 @@
         margin: 0 1ex;
         padding: 8px;
         border-radius: 5px;
-        font-size: 1rem;
+        font-size: 1em;
         color: set-color(gray-9);
         cursor: pointer;
         @include transition(all, 1s, ease, null);
@@ -44,7 +44,7 @@
           color: set-color(gray-7);
         }
       }
-      @include screen-max-width(720) {
+      @include screen-max-width(750) {
         display: none;
         @include transition(all, 1s, ease, null);
       }
@@ -52,24 +52,27 @@
   }
 }
 //when we click the btn bar then open the menu as a toggle class
-@include screen-max-width(720) {
+@include screen-max-width(750) {
   .nav__bar {
     position: relative;
     ul.open-close {
-      display: block;
+      display: flex;
+      flex-direction: column;
       position: absolute;
       @include inset(72px 0 0 0);
       background: set-color(gray-4);
-      padding: 2rem 0;
+      padding: 1em 0;
       width: set-col-width(1);
       height: 520px;
+      justify-content: center;
+      align-items: center;
       li {
         @include transition(all, 1s, ease, null);
-        margin: 2rem 0;
+        margin: 0.4em 0;
         display: block;
-        font-size: 32px;
+        font-size: 30px;
         text-align: center;
-        border-radius: 0;
+        border-radius: 5px;
       }
     }
   }
