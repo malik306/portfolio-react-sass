@@ -36,7 +36,7 @@ export default function Footer() {
                     <i className="fab fa-facebook-f"></i>
                 </div>
                 <div className="foot__content--copy">
-                    <p>&copy; Copyright 2021 Deign by <Link to="/">Malik Front End Developer</Link></p>
+                    <p>&copy; Copyright 2021 Deign by <Link to="/">Malik&nbsp;Portfolio</Link></p>
                 </div>
             </footer>
         </>
