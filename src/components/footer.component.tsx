@@ -9,16 +9,16 @@ export default function Footer() {
                         <Link to="/">
                             <li>Home</li>
                         </Link>
-                        <Link to="/about">
+                        <Link to="portfolio-react/about">
                             <li>About&nbsp;Me</li>
                         </Link>
-                        <Link to="/resume">
+                        <Link to="portfolio-react/resume">
                             <li>My&nbsp;Resume</li>
                         </Link>
-                        <Link to="/project">
+                        <Link to="portfolio-react/project">
                             <li>My&nbsp;Projects</li>
                         </Link>
-                        <Link to="/githubapi">
+                        <Link to="portfolio-react/githubapi">
                             <li>Github&nbsp;Api</li>
                         </Link>
                     </ul>
@@ -36,7 +36,7 @@ export default function Footer() {
                     <i className="fab fa-facebook-f"></i>
                 </div>
                 <div className="foot__content--copy">
-                    <p>&copy; Copyright 2021 Deign by <Link to="/">Malik&nbsp;Portfolio</Link></p>
+                    <p>&copy; Copyright 2021 Deign by <Link to="portfolio-react/">Malik&nbsp;Portfolio</Link></p>
                 </div>
             </footer>
         </>
