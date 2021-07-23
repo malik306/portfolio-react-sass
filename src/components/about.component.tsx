@@ -1,4 +1,4 @@
-export default function AboutMe(){
+export default function About(){
     return (
         <>
         <h5>About Me</h5>

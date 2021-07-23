@@ -2,7 +2,7 @@ import Header from "./components/header.component";
 import Project from "./components/project.component";
 import GithubApi from "./components/githubapi.component";
 import Footer from "./components/footer.component";
-import About from "./components/aboutme.component";
+import About from "./components/about.component";
 import Resume from "./components/resume.component";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
