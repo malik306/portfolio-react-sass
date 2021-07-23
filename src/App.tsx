@@ -12,11 +12,11 @@ export default function App() {
       <Router>{/*this is used to handle the Routing that is required*/}
         <Header />
         <Switch>{/*If we use switch then it is add the exact attribute in Route tag it will open single page */}
-          <Route path="/" exact />
-          <Route path="/about" component={About} />
-          <Route path="/resume" component={Resume} />
-          <Route path="/project" component={Project} />
-          <Route path="/githubapi" component={GithubApi} />
+          <Route path="/portfolio-react" exact />
+          <Route path="/portfolio-react/about" component={About} />
+          <Route path="/portfolio-react/resume" component={Resume} />
+          <Route path="/portfolio-react/project" component={Project} />
+          <Route path="/portfolio-react/githubapi" component={GithubApi} />
         </Switch>
         <Footer />
       </Router>
