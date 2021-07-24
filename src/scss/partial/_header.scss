@@ -10,7 +10,7 @@
     justify-content: space-between;
     a img {
       height: auto;
-      width: 8em;
+      width: 6em;
       background-size: cover;
     }
     &__humburger {
@@ -59,7 +59,7 @@
       display: flex;
       flex-direction: column;
       position: absolute;
-      @include inset(72px 0 0 0);
+      @include inset(75px 0 0 0);
       background: set-color(gray-4);
       padding: 1em 0;
       width: set-col-width(1);
