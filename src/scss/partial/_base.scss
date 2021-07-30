@@ -47,7 +47,7 @@ $color: (
   @return mix(#000000, $color, $percentage);
 }
 @function set-col-width($cols-divide) {
-  @return (100%/$cols-divide);
+  @return (100% / $cols-divide);
 }
 
 //Mixins
@@ -59,6 +59,6 @@ $color: (
 @mixin transition($name, $duration, $time-function, $delay) {
   transition: $name $duration $time-function $delay;
 }
-@mixin inset($inset){
+@mixin inset($inset) {
   inset: $inset;
 }

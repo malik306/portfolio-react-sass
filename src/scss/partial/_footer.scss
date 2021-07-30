@@ -44,16 +44,19 @@
       flex-direction: column;
       align-items: flex-end;
       width: set-col-width(2);
-      li {
-        display: block;
-        padding: 8px;
-        margin: 5px 0;
-        color: set-color(black);
-        border-radius: 8px;
-        @include transition(all, 1s, ease, null);
-        &:hover {
-          background: set-color(gray-2);
-          border-bottom: 1px solid black;
+      a {
+        width: auto;
+        text-align: right;
+        li {
+          display: block;
+          padding: 8px;
+          margin: 0.2em 0;
+          border-radius: 0.2em;
+          color: set-color(black);
+          @include transition(all, 1s, ease, null);
+          &:hover {
+            color: set-color(gray-5);
+          }
         }
       }
     }
@@ -77,11 +80,9 @@
         padding: 8px;
         color: set-color(gray-4);
         margin: 8px;
-        border-radius: 50%;
         @include transition(all, 0.5s, ease, null);
         &:hover {
           color: set-color(black);
-          background: set-color(gray-4);
         }
       }
     }
@@ -105,6 +106,13 @@
 @include screen-max-width(428) {
   .foot__content--let {
     font-size: 32px;
+  }
+}
+@include screen-max-width(835) {
+  .foot__content__list {
+    a {
+      text-align: center;
+    }
   }
 }
 //row-start,column-start,row-end ,column-end

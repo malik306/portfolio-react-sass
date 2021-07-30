@@ -30,27 +30,30 @@ export default function Header() {
     <>
       <header className="nav">
         <nav className="nav__bar">
-          <Link to="/portfolio-react" ><img src={logoBrand} alt="svg logo" /></Link>
+          <Link to="/portfolio-react" ><img src={logoBrand} alt="svg-logo" /></Link>
           <button type="button" onClick={handleToggle} className="nav__bar__humburger">
             <i className="fas fa-2x fa-bars"></i>
           </button>
-          <ul className={toggleClass ? "open-close" : ""}>
-            <Link to="/portfolio-react">
-              <li>Home</li>
-            </Link>
-            <Link to="/portfolio-react/about">
-              <li>About&nbsp;Me</li>
-            </Link>
-            <Link to="/portfolio-react/resume">
-              <li>My&nbsp;Resume</li>
-            </Link>
-            <Link to="/portfolio-react/project">
-              <li>My&nbsp;Projects</li>
-            </Link>
-            <Link to="/portfolio-react/githubapi">
-              <li>Github&nbsp;Api</li>
-            </Link>
-          </ul>
+          <div className={toggleClass ? "open-close" : ""}>
+            <ul>
+              <Link to="/portfolio-react">
+                <li>Home</li>
+              </Link>
+              <Link to="/portfolio-react/about">
+                <li>About&nbsp;Me</li>
+              </Link>
+              <Link to="/portfolio-react/resume">
+                <li>My&nbsp;Resume</li>
+              </Link>
+              <Link to="/portfolio-react/project">
+                <li>My&nbsp;Projects</li>
+              </Link>
+              <Link to="/portfolio-react/githubapi">
+                <li>Github&nbsp;Api</li>
+              </Link>
+            </ul>
+          </div>
+
         </nav>
       </header>
 

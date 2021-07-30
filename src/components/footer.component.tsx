@@ -25,7 +25,7 @@ export default function Footer() {
                 </div>
                 <div className="foot__content--icon">
                     <div className="foot__content--icon--envelope"><i className="fas fa-envelope"></i> <span>example@gmail.com</span> </div>
-                    <div className="foot__content--icon--map"><i className="fas fa-map-marker-alt"></i> <span>236, The Mall ,Faisalabad ,Punjab</span> </div>
+                    <div className="foot__content--icon--map"><i className="fas fa-map-marker-alt"></i> <span>Punjab, Pakistan</span> </div>
                     <div className="foot__content--icon--phone"><i className="fas fa-phone-alt"></i> <span>+92-XXX-XXXXXXX</span> </div>
                 </div>
                 <div className="foot__content--socialicon">

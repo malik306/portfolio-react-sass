@@ -26,27 +26,28 @@
         right: 1em;
       }
     }
-    ul {
-      display: flex;
-      flex: none;
-      color: set-color(white);
-      li {
-        margin: 0 1ex;
-        padding: 8px;
-        border-radius: 5px;
-        font-size: 1em;
-        color: set-color(gray-9);
-        cursor: pointer;
-        @include transition(all, 1s, ease, null);
-        &:hover {
-          border-bottom: 1px solid set-color(gray);
-          background-color: set-color(gray-2);
-          color: set-color(gray-7);
+    div {
+      ul {
+        display: flex;
+        flex: none;
+        color: set-color(white);
+        a {
+          margin: 0 1ex;
+          padding: 8px;
+          border-radius: 5px;
+          font-size: 1em;
+          color: set-color(gray-9);
+          cursor: pointer;
+          @include transition(all, 1s, ease, null);
+          &:hover {
+            border-bottom: 1px solid set-color(gray);
+            background-color: set-color(gray-2);
+            color: set-color(gray-7);
+          }
         }
       }
       @include screen-max-width(750) {
         display: none;
-        @include transition(all, 1s, ease, null);
       }
     }
   }
@@ -55,24 +56,28 @@
 @include screen-max-width(750) {
   .nav__bar {
     position: relative;
-    ul.open-close {
-      display: flex;
-      flex-direction: column;
+    div.open-close {
+      display: block;
       position: absolute;
-      @include inset(75px 0 0 0);
-      background: set-color(gray-4);
-      padding: 1em 0;
-      width: set-col-width(1);
-      height: 520px;
-      justify-content: center;
-      align-items: center;
-      li {
-        @include transition(all, 1s, ease, null);
-        margin: 0.4em 0;
-        display: block;
-        font-size: 30px;
-        text-align: center;
-        border-radius: 5px;
+      border-radius: 5px;
+      text-align: center;
+      padding: 15px;
+      top: 88px;
+      right: 0.5em;
+      background: set-color(gray-5);
+      box-shadow: -1px 1px 5px 0 set-color(black);
+      ul {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        a {
+          &:first-child {
+            margin: 0;
+          }
+          margin: 10px 0 0 0;
+          width: set-col-width(1);
+        }
       }
     }
   }
