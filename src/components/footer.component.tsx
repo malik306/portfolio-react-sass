@@ -28,7 +28,7 @@ export default function Footer() {
                     <div className="foot__content--icon--map"><i className="fas fa-map-marker-alt"></i> <span>Punjab, Pakistan</span> </div>
                     <div className="foot__content--icon--phone"><i className="fas fa-phone-alt"></i> <span>+92-XXX-XXXXXXX</span> </div>
                 </div>
-                <div className="foot__content--socialicon">
+                <div className="foot__content--social-icon">
                     <i className="fab fa-instagram"></i>
                     <i className="fab fa-github-alt"></i>
                     <i className="fab fa-twitter"></i>

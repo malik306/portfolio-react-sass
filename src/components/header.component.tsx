@@ -31,7 +31,7 @@ export default function Header() {
       <header className="nav">
         <nav className="nav__bar">
           <Link to="/portfolio-react" ><img src={logoBrand} alt="svg-logo" /></Link>
-          <button type="button" onClick={handleToggle} className="nav__bar__humburger">
+          <button type="button" onClick={handleToggle} className="nav__bar__hum-burger">
             <i className="fas fa-2x fa-bars"></i>
           </button>
           <div className={toggleClass ? "open-close" : ""}>
@@ -48,7 +48,7 @@ export default function Header() {
               <Link to="/portfolio-react/project">
                 <li>My&nbsp;Projects</li>
               </Link>
-              <Link to="/portfolio-react/githubapi">
+              <Link to="/portfolio-react/github-api">
                 <li>Github&nbsp;Api</li>
               </Link>
             </ul>

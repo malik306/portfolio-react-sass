@@ -1,5 +1,5 @@
 import Skill from "./skill.component";
-import Carousel from "./detailCarousel.component";
+import Carousel from "./detail-carousel.component";
 export default function About() {
     return (
         <>

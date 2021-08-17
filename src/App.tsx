@@ -1,6 +1,6 @@
 import Header from "./components/header.component";
 import Project from "./components/project.component";
-import GithubApi from "./components/githubapi.component";
+import GithubApi from "./components/github-api.component";
 import Footer from "./components/footer.component";
 import About from "./components/about.component";
 import Resume from "./components/resume.component";
@@ -16,7 +16,7 @@ export default function App() {
           <Route path="/portfolio-react/about" component={About} />
           <Route path="/portfolio-react/resume" component={Resume} />
           <Route path="/portfolio-react/project" component={Project} />
-          <Route path="/portfolio-react/githubapi" component={GithubApi} />
+          <Route path="/portfolio-react/github-api" component={GithubApi} />
         </Switch>
         <Footer />
       </Router>
